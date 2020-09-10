@@ -1,0 +1,10 @@
+E  =  && no Java, C e C++.
+ou =  || no Java, C e C++.
+
+!= comparação diferente.
+div 21 div 5 = 4 inteiro.
+mod 21 mod 5 = 1 resto inteiro.
+
+
+
+
