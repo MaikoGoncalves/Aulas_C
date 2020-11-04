@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1600222157 source:c:\users\maiko\onedrive\documents\github\c\exercicio13\exercicio13.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+

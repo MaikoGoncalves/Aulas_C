@@ -1,3 +1,7 @@
+#include <stdio.h>   
+#include <stdlib.h>  
+#include <math.h>   
+
 E  =  && no Java, C e C++.
 ou =  || no Java, C e C++.
 
@@ -6,5 +10,321 @@ div 21 div 5 = 4 inteiro.
 mod 21 mod 5 = 1 resto inteiro.
 
 
+/*    !! Declaração de Variáveis em C
+       Tipo        nome;
+       char        a,b,c,d
+       int         A,B,C,D
+       float       -
+       double
+       Não pode usar acentos e não começar com numero e não pode usar palavra do sistema exemplo int
+       A linguagem e case sensitive letras maiúsculo e minúsculo e diferente.
+       char letra = 'a'; aceita numero pequeno -128 a 127
+       float n = 5.25;
+       double d = 5.0e3; tenho 5 x 10 ao cubo
+
+       !! Printf
+       printf("Meu Programa C \n");
+       Se tenho
+       char letra = 'a';
+       int nro = 10;
+       float n = 5.25;
+       printf("%c \n",letra);     caracter %c
+       printf("%d \n",letra);     caracter %d
+       printf("%d \n", nro);      inteiro  %d
+       printf("%f \n",n);         float e double    %f
+
+	   !! Scanf
+	   scanf("tipos de entrada", variaveis);
+	   scanf("%c",&letra); //char
+	   scanf("%d",&nro);   //int
+	   scanf("%f",&n);     //float ou double e %f
+       exemplos
+       scanf("%d%f",&nro,&f); Mais de um numero
+
+       !! Variável = Expressão;
+       int x= 5,y;
+       y=x;
+       y=x+10;
+
+       !! Constantes;
+       const int nro = 10;
+       int soma = nro + 1;
+       printf("Constante %d", nro);
+       #define PI 3.1415
+
+       !! Operadores Aritmeticos
+       soma:          +      ++     +=
+       subtração:     -      --     -+
+       multiplicação: *
+       divisão:       /
+       resto:         %
+       x++;
+       x--:
+       y=x++;
+       y=++x;
+       y+=x;
+       y-=x;
+       y*=x;
+
+       !! Operadores relacionais
+       >
+       <
+       >=
+       <=
+       ==
+       !=
+
+       !! Operadore logico
+       &&    operador e
+       ||    operador ou
+       !     operador negação
+
+       !! Comando IF
+       if(condição){
+       }
+       Exemplo:
+       int x;
+       printf("Digite um valor inteiro:");
+       scanf("%d",&x);
+       if x>0{
+       printf("O Valor e positivo\n");
+       }else{
+       printf("Fim do programa\n");
+       }
+       Exemplo:
+       int x;
+       printf("Digite um valor inteiro:");
+       scanf("%d",&x);
+       if x>0{
+       printf("O Valor e positivo\n");
+       }else{
+       printf("Fim do programa\n");
+       }
+
+      !!OPERADOR  ? ;
+        z= x>y ? x : y;
+        (x>y) ? printf("x eh o maior. \n");
+              : printf("y eh o maior. \n");
+           
+        
+
+
+
+      !!OPERADOR Switch
+      char ch;
+      printf("Digite um simbolo de pontuação: ");
+      scanf("%c",&ch);
+      switch (ch){
+      case'.': printf("Ponto.\n" ); break;
+      case',': printf("Virgula.\n" ); break;
+      case':': printf("Dois pontos.\n" ); break;
+      case';': printf("Ponto e Virgula.\n" ); break;
+      default : printf("Não eh pontuação. \n");
+      }
+
+   !! OPERADOR WHILE
+   while (a<b){
+   a++;
+   printf("%d\n",a);
+   }
+
+   !! FOR
+      for (c=a; c<=b; c++){
+      printf("%d\n",c);
+      }
+
+----------------------------------------------------------------
+
+
+#include <stdio.h>   // server para gente escrever e ler. Escrevi na tela ler no teclado e Stdio.
+#include <stdlib.h>  // server para parar no final do programa.
+#include <math.h>    // Operadores.
+/*
+1) Escreva um algoritmo que leia as medidas dos lados de um retângulo (valores inteiros),
+calcule a sua área e mostre o resultado.
+*/
+/*
+int main(void){
+    int lado1,lado2,calc;
+    printf("!! Vamos calcular a area de um retangulo: !!\n");
+    printf("!! USAR NUMEROS INTEIROS !!\n");
+    printf(" Digite um lado:\n");
+    scanf("%d",&lado1);
+    printf(" Digite outro lado:\n");
+    scanf("%d",&lado2);
+    calc = lado1 * lado2;
+	printf(" Primeiro Lado = %d \n", lado1);
+    printf(" Segundo Lado = %d \n", lado2);
+    printf(" O resultado da area e: %d \n",calc);
+	return 0;
+}
+*/
+//------------------------------------------------------------------------------------------------------------
+/*
+2) Escreva um algoritmo que calcule e informe o peso ideal de uma mulher, tendo como
+entrada de dados a sua altura de acordo com a fórmula de peso ideal feminino:
+(62.1*altura - 44.7)*/
+/*
+int main(void){
+    double altura,peso,ide;
+    printf("!! Vamos calcular peso ideal feminino !!\n");
+    printf(" Digite sua altura: \n");
+    scanf("%lf",&altura);
+    printf(" Digite seu peso: \n");
+    scanf("%lf",&peso);
+    ide=((62.1*altura)-44.7);
+   	printf("\n Sua altura e: %lf \n", altura);
+    printf("\n Seu peso e: %lf \n", peso);
+    printf("\n Peso Ideal e: %lf \n", ide);
+	return 0;
+}
+*/
+//------------------------------------------------------------------------------------------------------------
+/*3) Calcule o valor da raiz da função de 1º grau. Sendo que a fórmula geral é dada por
+f (x) = ax+b lembrando que a raiz sé da por  x = −b/ a
+. Peça ao usuário para informar valores para a e b. Mostre o resultado na tela.*/
+/*
+int main(void){
+    double resultado,x,a,b;
+    printf("!! Vamos calcular f (x) = ax+b !!\n");
+    printf(" Digite um numero para A: \n");
+    scanf("%lf",&a);
+    printf(" Digite um numero para B: \n");
+    scanf("%lf",&b);
+    x = (-b/a);
+    resultado = a*x+b;
+   	printf("\n Valor de A e: %.2lf \n", a);
+    printf("\n Valor de B e: %.2lf \n", b);
+    printf("\n Valor de X e: %.2lf \n", x);
+    printf("\n Valor da Funcao f(x)=ax+b e: %.2lf \n", resultado);
+    return 0;
+}*/
+//--------------------------------------------------------------------------------------------------------------
+/*
+4) Faça um algoritmo que calcule a soma de três números informados pelo usuário e faça
+a média entre eles. */
+
+#include <stdio.h>   
+#include <stdlib.h>  
+#include <math.h> 
+  int main(void){
+    double a,b,c,resultado;
+    printf("!! Vamos calcular media de 3 numeros !!\n");
+    printf(" Digite um numero: \n");
+    scanf("%lf",&a);
+    printf(" Digite um numero: \n");
+    scanf("%lf",&b);
+    printf(" Digite um numero: \n");
+    scanf("%lf",&c);
+    resultado = (a+b+c)/3;
+   	printf("\n Valor de A e: %.2lf \n", a);
+    printf("\n Valor de B e: %.2lf \n", b);
+    printf("\n Valor de C e: %.2lf \n", c);
+    printf("\n A media e: %.2lf \n", resultado);
+    return 0;
+}
+
+//-----------------------------------------------------------------------------------------------------
+/*
+5)Faça um algoritmo que calcule a área de um triângulo retângulo. Sabendo que a área é dada
+pela fórmula a seguir: Area= (base * altura)/2.
+*/
+#include <stdio.h>   
+#include <stdlib.h>  
+#include <math.h> 
+  int main(void){
+    double base,altura,area;
+    printf("!! Vamos calcular Area de um triangulo !!\n");
+    printf(" Digite a Base: \n");
+    scanf("%lf",&base);
+    printf(" Digite a altura: \n");
+    scanf("%lf",&altura);
+    area = (base*altura)/2;
+   	printf("\n A base e: %.2lf \n", base);
+    printf("\n A altura e: %.2lf \n", altura);
+    printf("\n Valor da Area e: %.2lf cm2 \n", area);
+    return 0;
+}
+//----------------------------------------------------------------------------------------------------------------
+/*6. Faça um algoritmo que calcule a soma de três notas de um aluno, calcule a média e verifique
+se o aluno foi aprovado ou reprovado. Considerando que para ser aprovado o aluno precisa
+ter média maior ou igual a 70 pontos.
+*/
+
+#include <stdio.h>   
+#include <stdlib.h>  
+#include <math.h> 
+  int main(void){
+    double nota1,nota2,nota3,media;
+    printf("!! Vamos calcular media de um aluno e ver se foi aprovado ou reprovado !!\n");
+    printf(" Digite a primeira nota: \n");
+    scanf("%lf",&nota1);
+    printf(" Digite a segunda nota: \n");
+    scanf("%lf",&nota2);
+    printf(" Digite a terceira nota: \n");
+    scanf("%lf",&nota3);
+    media = (nota1+nota2+nota3)/3;
+   	if (media>=70){
+    printf("\n Valor da primeira nota: %.2lf \n", nota1);
+    printf("\n Valor da segunda nota: %.2lf \n", nota2);
+    printf("\n Valor da terceira nota: %.2lf \n", nota3);
+    printf("\n A sua media foi: %.2lf \n", media);
+    printf("\n !!! FOI APROVADO !!! \n");
+   	}else {printf("\n !!! NAO FOI APROVADO !!! \n");
+   	}
+    return 0;
+}
+//-------------------------------------------------------------------------------------------------------------------------
+/*7. Faça um algoritmo em fluxograma e em linguagem C que compare dois números inteiros e
+imprima o maior número. */
+ 
+#include <stdio.h>   
+#include <stdlib.h>  
+#include <math.h> 
+   int main(void){
+    int a,b;
+    printf("!! Vamos comparar 2 numeros inteiros !!\n");
+    printf(" Digite o primeiro: \n");
+    scanf("%d",&a);
+    printf(" Digite o segundo: \n");
+    scanf("%d",&b);
+    if (a>b){
+    printf("\n %d e maior que %d \n", a,b);
+    }else {
+    printf("\n %d e maior que %d \n", b,a);
+    }
+
+    return 0;
+    }
+//--------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+AULA 
+Exercicio
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{   char sexo;
+
+
+    printf("Digite um sexo (M) ou (F) \n");
+    scanf("%c",&sexo);
+
+    switch (sexo){
+      case'M': printf("Masculino\n" ); break;
+      case'm': printf("Masculino.\n" ); break;
+      case'f': printf("Feminino.\n" ); break;
+      case'F': printf("Feminino.\n" ); break;
+
+      }
+
+        return 0;
+}
 
 

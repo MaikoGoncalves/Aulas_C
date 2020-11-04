@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1600300457 source:c:\users\maiko\onedrive\documents\github\c\aulas\aulas\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
